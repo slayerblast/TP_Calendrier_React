@@ -69,11 +69,12 @@ export function Calendrier()
   }
 
   const getNextYear = () => {
-    setSelectedDate(prevValue => new Date(prevValue.getFullYear()+ 1, 1));
+    setSelectedDate(prevValue => new Date(prevValue.getFullYear()+ 1,prevValue.getMonth(), 1));
   }
 
   const getPrevYear = () => {
-    setSelectedDate(prevValue => new Date(prevValue.getFullYear()- 1, 1));
+    setSelectedDate(prevValue => new Date(prevValue.getFullYear()+ 1,prevValue.getMonth(), 1));
+    // setSelectedDate(prevValue => new Date(prevValue.getFullYear()- 1, 1));
   }
   return {
     mois,
